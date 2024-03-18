@@ -47,7 +47,8 @@ class Comment(Base):
 class Media(Base):
     __tablename__ = 'media'
     ID = Column(Integer, primary_key=True)
-    type = Column(Enum)
+    type = Column(String)
+    # type = Column(Enum)
     url = Column(String(30))
     post_id = Column(Integer, ForeignKey('post.ID'))
     post_id_relationship = relationship(Post)
